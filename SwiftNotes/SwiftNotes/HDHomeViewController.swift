@@ -17,13 +17,6 @@ class HDHomeViewController: HDBaseViewController {
     }
     
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        navigationController?.pushViewController(HDHomeViewController(), animated: true)
-        
-        return
-    }
-    
-    
     func sceneTest() {
         // 在点击按钮时创建一个新场景
         let button = UIButton(type: .system)
