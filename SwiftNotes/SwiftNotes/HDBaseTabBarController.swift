@@ -21,7 +21,7 @@ class HDBaseTabBarController: UITabBarController {
         
         configTabBarUI()
         //常规方式
-        viewControllers = (createViewControllers() as! [UIViewController])
+        viewControllers = createViewControllers()
     }
     
     func configTabBarUI() {
@@ -32,7 +32,7 @@ class HDBaseTabBarController: UITabBarController {
 }
 
 extension HDBaseTabBarController {
-    func createViewControllers() -> NSArray {
+    func createViewControllers() -> Array<HDBaseNavigationController> {
         let navigationController1 = HDBaseNavigationController(rootViewController: HDHomeViewController())
         navigationController1.tabBarItem  = createTabBarItem(title: "Home", normalImageName: "tabbar_home_normal", selectedImageName: "tabbar_home_selected")
         
@@ -49,23 +49,23 @@ extension HDBaseTabBarController {
     }
     
 
-    func createTabBarItem(NSString: NSString, normalImageName: NSString, selectedImageName: NSString, badgeValue: NSString, tag: Int) -> (UITabBarItem) {
-        let tabBarItem = createTabBarItem(title: NSString, normalImageName: normalImageName, selectedImageName: selectedImageName, badgeValue: badgeValue)
+    func createTabBarItem(title: String, normalImageName: String, selectedImageName: String, badgeValue: String, tag: Int) -> (UITabBarItem) {
+        let tabBarItem = createTabBarItem(title: title, normalImageName: normalImageName, selectedImageName: selectedImageName, badgeValue: badgeValue)
         tabBarItem.tag = tag
         return tabBarItem
     }
     
-    func createTabBarItem(title: NSString, normalImageName: NSString, selectedImageName: NSString, badgeValue: NSString) -> (UITabBarItem) {
+    func createTabBarItem(title: String, normalImageName: String, selectedImageName: String, badgeValue: String) -> (UITabBarItem) {
         let tabBarItem = createTabBarItem(title: title, normalImageName: normalImageName, selectedImageName: selectedImageName)
         tabBarItem.badgeValue = badgeValue as String
         tabBarItem.badgeColor = UIColor.red
         return tabBarItem
     }
     
-    func createTabBarItem(title: NSString, normalImageName: NSString, selectedImageName: NSString) -> (UITabBarItem) {
-        let normalImage = UIImage(named: normalImageName as String)?.withRenderingMode(.alwaysOriginal)
-        let selectedImage = UIImage(named: selectedImageName as String)?.withRenderingMode(.alwaysOriginal)
-        let tabBarItem = UITabBarItem(title: title as String , image: normalImage, selectedImage: selectedImage)
+    func createTabBarItem(title: String, normalImageName: String, selectedImageName: String) -> (UITabBarItem) {
+        let normalImage = UIImage(named: normalImageName)?.withRenderingMode(.alwaysOriginal)
+        let selectedImage = UIImage(named: selectedImageName)?.withRenderingMode(.alwaysOriginal)
+        let tabBarItem = UITabBarItem(title: title, image: normalImage, selectedImage: selectedImage)
         return tabBarItem
     }
 

@@ -14,9 +14,9 @@ class HDMineViewController: HDBaseViewController {
         
     }
     
-    init(title: NSString?) {
+    init(title: String?) {
         super.init(nibName: nil, bundle: nil)
-        self.title = title as String?
+        self.title = title
     }
     
     required init?(coder: NSCoder) {
