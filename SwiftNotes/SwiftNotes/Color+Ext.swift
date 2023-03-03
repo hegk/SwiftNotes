@@ -11,8 +11,19 @@ import UIKit
 
 extension UIColor {
     
+    /// 配置rgb的方式初始化UIColor对象
+    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: a)
+    }
+    
     /// 十六进制颜色转换为UIColor对象
-    /// - Parameter hexString: 十六进制颜色
+    /// - Parameter hexInt: 十六进制颜色 0xAAAAAA
+    convenience init(hexInt: Int) {
+      self.init(r: (hexInt & 0xff0000) >> 16, g: (hexInt & 0xff00) >> 8, b: (hexInt & 0xff), a: 1)
+    }
+    
+    /// 十六进制颜色转换为UIColor对象
+    /// - Parameter hexString: 十六进制颜色 #AAAAAA
     convenience init?(hexString: String) {
         
         let r, g, b, a: CGFloat
