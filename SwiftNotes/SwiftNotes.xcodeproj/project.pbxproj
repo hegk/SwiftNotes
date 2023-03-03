@@ -55,101 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		96CEE7AE29AC8025008B1AFA /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7B329AC843A008B1AFA /* AppDelegate.swift */,
-				96CEE7B429AC843A008B1AFA /* SceneDelegate.swift */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
-		96CEE7B729AC8534008B1AFA /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7BC29AC87FD008B1AFA /* BaseNavigation */,
-				96CEE7BB29AC87E5008B1AFA /* BaseTabBar */,
-				96CEE7B829AC8546008B1AFA /* BaseViewController */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		96CEE7B829AC8546008B1AFA /* BaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7B929AC8563008B1AFA /* HDBaseViewController.swift */,
-			);
-			name = BaseViewController;
-			sourceTree = "<group>";
-		};
-		96CEE7BB29AC87E5008B1AFA /* BaseTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7BE29AC8B48008B1AFA /* HDBaseTabBarController.swift */,
-				96DA514129AEF18800A92405 /* HDShopTabBarController.swift */,
-			);
-			name = BaseTabBar;
-			sourceTree = "<group>";
-		};
-		96CEE7BC29AC87FD008B1AFA /* BaseNavigation */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7C429AD8F26008B1AFA /* HDBaseNavigationController.swift */,
-			);
-			name = BaseNavigation;
-			sourceTree = "<group>";
-		};
-		96CEE7BD29AC8811008B1AFA /* Demos */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7CC29AE0CFB008B1AFA /* HDDemosViewController.swift */,
-			);
-			name = Demos;
-			sourceTree = "<group>";
-		};
-		96CEE7C629AE09C5008B1AFA /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7CA29AE0B8E008B1AFA /* HDHomeViewController.swift */,
-			);
-			name = Home;
-			sourceTree = "<group>";
-		};
-		96CEE7C729AE09DC008B1AFA /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7C629AE09C5008B1AFA /* Home */,
-				96CEE7BD29AC8811008B1AFA /* Demos */,
-				96CEE7C829AE0A8F008B1AFA /* Kit */,
-				96CEE7C929AE0A9E008B1AFA /* Mine */,
-			);
-			name = Modules;
-			sourceTree = "<group>";
-		};
-		96CEE7C829AE0A8F008B1AFA /* Kit */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7CE29AE0D25008B1AFA /* HDKitViewController.swift */,
-			);
-			name = Kit;
-			sourceTree = "<group>";
-		};
-		96CEE7C929AE0A9E008B1AFA /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				96CEE7D229AE0EB7008B1AFA /* HDMineViewController.swift */,
-			);
-			name = Mine;
-			sourceTree = "<group>";
-		};
-		96DA514329AEFDBA00A92405 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				96FA77D729A88F5700D7F923 /* Assets.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		96DA514429AEFE8700A92405 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +71,111 @@
 				96DA514429AEFE8700A92405 /* Extension */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		96F1217729B1F01000128270 /* Appliction */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7B329AC843A008B1AFA /* AppDelegate.swift */,
+				96CEE7B429AC843A008B1AFA /* SceneDelegate.swift */,
+			);
+			path = Appliction;
+			sourceTree = "<group>";
+		};
+		96F1218029B1F46000128270 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				96F1218129B1F48F00128270 /* Home */,
+				96F1218229B1F4A500128270 /* Demos */,
+				96F1218329B1F4AD00128270 /* Kit */,
+				96F1218429B1F4B500128270 /* Mine */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		96F1218129B1F48F00128270 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7CA29AE0B8E008B1AFA /* HDHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		96F1218229B1F4A500128270 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7CC29AE0CFB008B1AFA /* HDDemosViewController.swift */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		96F1218329B1F4AD00128270 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7CE29AE0D25008B1AFA /* HDKitViewController.swift */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		96F1218429B1F4B500128270 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7D229AE0EB7008B1AFA /* HDMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		96F1218529B1F5AF00128270 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				96FA77DC29A88F5700D7F923 /* Info.plist */,
+				96FA77D929A88F5700D7F923 /* LaunchScreen.storyboard */,
+				96FA77D429A88F5500D7F923 /* Main.storyboard */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		96F1218729B1F7E200128270 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				96F1218A29B1F82200128270 /* BaseViewController */,
+				96F1218929B1F81800128270 /* TabBar */,
+				96F1218829B1F81000128270 /* Navigation */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		96F1218829B1F81000128270 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7C429AD8F26008B1AFA /* HDBaseNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		96F1218929B1F81800128270 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7BE29AC8B48008B1AFA /* HDBaseTabBarController.swift */,
+				96DA514129AEF18800A92405 /* HDShopTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		96F1218A29B1F82200128270 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96CEE7B929AC8563008B1AFA /* HDBaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		96F1218B29B1F86900128270 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96FA77D729A88F5700D7F923 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		96FA77C229A88F5500D7F923 = {
@@ -187,24 +197,14 @@
 		96FA77CD29A88F5500D7F923 /* SwiftNotes */ = {
 			isa = PBXGroup;
 			children = (
-				96CEE7AE29AC8025008B1AFA /* Application */,
-				96CEE7C729AE09DC008B1AFA /* Modules */,
-				96CEE7B729AC8534008B1AFA /* Base */,
+				96F1217729B1F01000128270 /* Appliction */,
+				96F1218729B1F7E200128270 /* Base */,
+				96F1218029B1F46000128270 /* Modules */,
 				96DA514729AF319700A92405 /* Common */,
-				96DA514329AEFDBA00A92405 /* Resources */,
-				96FA77E229A89BE600D7F923 /* config */,
+				96F1218B29B1F86900128270 /* Resources */,
+				96F1218529B1F5AF00128270 /* Config */,
 			);
 			path = SwiftNotes;
-			sourceTree = "<group>";
-		};
-		96FA77E229A89BE600D7F923 /* config */ = {
-			isa = PBXGroup;
-			children = (
-				96FA77DC29A88F5700D7F923 /* Info.plist */,
-				96FA77D929A88F5700D7F923 /* LaunchScreen.storyboard */,
-				96FA77D429A88F5500D7F923 /* Main.storyboard */,
-			);
-			name = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +440,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GE322NYCW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftNotes/Info.plist;
+				INFOPLIST_FILE = SwiftNotes/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SwiftNotes;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -468,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GE322NYCW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftNotes/Info.plist;
+				INFOPLIST_FILE = SwiftNotes/Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SwiftNotes;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
