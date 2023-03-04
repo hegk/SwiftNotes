@@ -40,12 +40,17 @@ class HDBaseNavigationController: UINavigationController {
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        if children.count == 1 {
+        if children.count > 0 {
+            let backBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "navi_back")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action:#selector(back))
+            backBarButtonItem.imageInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
+            viewController.navigationItem.leftBarButtonItem = backBarButtonItem
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)
+    }
+    
+    @objc func back() {
+        super.popViewController(animated: true)
     }
     
 }
