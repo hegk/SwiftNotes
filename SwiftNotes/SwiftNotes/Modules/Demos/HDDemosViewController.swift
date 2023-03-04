@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 
+
 class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    static let title_mine = "mine"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableV
         view.addSubview(tableView)
     }
     
-   fileprivate let demosTitle = ["01","02","03"]
+   fileprivate let demosTitle = [title_mine,"02","03"]
     
    fileprivate lazy var tableView: UITableView = {
        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kSafeAreaHeight), style: .plain)
@@ -51,9 +53,8 @@ extension HDDemosViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowTitle = demosTitle[indexPath.row]
         switch rowTitle {
-        case "01":
-            
-            
+        case HDDemosViewController.title_mine:
+            navigationController?.pushViewController(HDDemoMineController(), animated: true)
             break
         default:
             break

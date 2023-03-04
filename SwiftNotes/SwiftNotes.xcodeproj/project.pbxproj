@@ -19,6 +19,10 @@
 		96DA514229AEF18800A92405 /* HDShopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DA514129AEF18800A92405 /* HDShopTabBarController.swift */; };
 		96DA514629AEFEF300A92405 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DA514529AEFEF300A92405 /* Color+Ext.swift */; };
 		96DA514929AF321600A92405 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DA514829AF321600A92405 /* Global.swift */; };
+		96F1219029B2DEA900128270 /* HDDemoMineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1218F29B2DEA900128270 /* HDDemoMineUser.swift */; };
+		96F1219229B2E1AB00128270 /* HDDemoMinePopulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219129B2E1AB00128270 /* HDDemoMinePopulate.swift */; };
+		96F1219429B2E8D600128270 /* HDDemoMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219329B2E8D600128270 /* HDDemoMineCell.swift */; };
+		96F1219629B2EAEB00128270 /* HDDemoMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219529B2EAEB00128270 /* HDDemoMineController.swift */; };
 		96FA77D629A88F5500D7F923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D429A88F5500D7F923 /* Main.storyboard */; };
 		96FA77D829A88F5700D7F923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D729A88F5700D7F923 /* Assets.xcassets */; };
 		96FA77DB29A88F5700D7F923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D929A88F5700D7F923 /* LaunchScreen.storyboard */; };
@@ -37,6 +41,10 @@
 		96DA514129AEF18800A92405 /* HDShopTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDShopTabBarController.swift; sourceTree = "<group>"; };
 		96DA514529AEFEF300A92405 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		96DA514829AF321600A92405 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		96F1218F29B2DEA900128270 /* HDDemoMineUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMineUser.swift; sourceTree = "<group>"; };
+		96F1219129B2E1AB00128270 /* HDDemoMinePopulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMinePopulate.swift; sourceTree = "<group>"; };
+		96F1219329B2E8D600128270 /* HDDemoMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMineCell.swift; sourceTree = "<group>"; };
+		96F1219529B2EAEB00128270 /* HDDemoMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMineController.swift; sourceTree = "<group>"; };
 		96FA77CB29A88F5500D7F923 /* SwiftNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FA77D529A88F5500D7F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FA77D729A88F5700D7F923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,20 +63,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		96DA514429AEFE8700A92405 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				96DA514529AEFEF300A92405 /* Color+Ext.swift */,
-			);
-			name = Extension;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		96DA514729AF319700A92405 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				96DA514829AF321600A92405 /* Global.swift */,
-				96DA514429AEFE8700A92405 /* Extension */,
+				96F1219929B32E1500128270 /* Extension */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -105,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				96CEE7CC29AE0CFB008B1AFA /* HDDemosViewController.swift */,
+				96F1218C29B2D99000128270 /* 01-mine */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -176,6 +176,25 @@
 				96FA77D729A88F5700D7F923 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		96F1218C29B2D99000128270 /* 01-mine */ = {
+			isa = PBXGroup;
+			children = (
+				96F1218F29B2DEA900128270 /* HDDemoMineUser.swift */,
+				96F1219129B2E1AB00128270 /* HDDemoMinePopulate.swift */,
+				96F1219329B2E8D600128270 /* HDDemoMineCell.swift */,
+				96F1219529B2EAEB00128270 /* HDDemoMineController.swift */,
+			);
+			path = "01-mine";
+			sourceTree = "<group>";
+		};
+		96F1219929B32E1500128270 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				96DA514529AEFEF300A92405 /* Color+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		96FA77C229A88F5500D7F923 = {
@@ -283,7 +302,11 @@
 				96CEE7B529AC843A008B1AFA /* AppDelegate.swift in Sources */,
 				96CEE7CF29AE0D25008B1AFA /* HDKitViewController.swift in Sources */,
 				96CEE7CD29AE0CFB008B1AFA /* HDDemosViewController.swift in Sources */,
+				96F1219629B2EAEB00128270 /* HDDemoMineController.swift in Sources */,
+				96F1219029B2DEA900128270 /* HDDemoMineUser.swift in Sources */,
+				96F1219429B2E8D600128270 /* HDDemoMineCell.swift in Sources */,
 				96DA514229AEF18800A92405 /* HDShopTabBarController.swift in Sources */,
+				96F1219229B2E1AB00128270 /* HDDemoMinePopulate.swift in Sources */,
 				96CEE7CB29AE0B8E008B1AFA /* HDHomeViewController.swift in Sources */,
 				96CEE7B629AC843A008B1AFA /* SceneDelegate.swift in Sources */,
 				96CEE7BF29AC8B49008B1AFA /* HDBaseTabBarController.swift in Sources */,
