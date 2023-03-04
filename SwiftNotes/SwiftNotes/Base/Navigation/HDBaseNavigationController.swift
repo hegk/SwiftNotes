@@ -39,5 +39,13 @@ class HDBaseNavigationController: UINavigationController {
         navigationBar.isTranslucent = false
     }
     
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        if children.count == 1 {
+            viewController.hidesBottomBarWhenPushed = true
+        }
+        super.pushViewController(viewController, animated: animated)
+    }
     
 }
