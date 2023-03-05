@@ -23,6 +23,11 @@
 		96F1219229B2E1AB00128270 /* HDDemoMinePopulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219129B2E1AB00128270 /* HDDemoMinePopulate.swift */; };
 		96F1219429B2E8D600128270 /* HDDemoMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219329B2E8D600128270 /* HDDemoMineCell.swift */; };
 		96F1219629B2EAEB00128270 /* HDDemoMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219529B2EAEB00128270 /* HDDemoMineController.swift */; };
+		96F1219D29B4727A00128270 /* HDDemoArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219C29B4727A00128270 /* HDDemoArtistController.swift */; };
+		96F1219F29B4729900128270 /* HDDemoArtistDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1219E29B4729900128270 /* HDDemoArtistDetailController.swift */; };
+		96F121A529B472FC00128270 /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F121A429B472FC00128270 /* artists.json */; };
+		96F121AA29B4823A00128270 /* HDDemoArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F121A829B4823A00128270 /* HDDemoArtistCell.swift */; };
+		96F121AB29B4823A00128270 /* HDDemoArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F121A929B4823A00128270 /* HDDemoArtistCell.xib */; };
 		96FA77D629A88F5500D7F923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D429A88F5500D7F923 /* Main.storyboard */; };
 		96FA77D829A88F5700D7F923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D729A88F5700D7F923 /* Assets.xcassets */; };
 		96FA77DB29A88F5700D7F923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D929A88F5700D7F923 /* LaunchScreen.storyboard */; };
@@ -45,6 +50,11 @@
 		96F1219129B2E1AB00128270 /* HDDemoMinePopulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMinePopulate.swift; sourceTree = "<group>"; };
 		96F1219329B2E8D600128270 /* HDDemoMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMineCell.swift; sourceTree = "<group>"; };
 		96F1219529B2EAEB00128270 /* HDDemoMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoMineController.swift; sourceTree = "<group>"; };
+		96F1219C29B4727A00128270 /* HDDemoArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoArtistController.swift; sourceTree = "<group>"; };
+		96F1219E29B4729900128270 /* HDDemoArtistDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoArtistDetailController.swift; sourceTree = "<group>"; };
+		96F121A429B472FC00128270 /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
+		96F121A829B4823A00128270 /* HDDemoArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoArtistCell.swift; sourceTree = "<group>"; };
+		96F121A929B4823A00128270 /* HDDemoArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDDemoArtistCell.xib; sourceTree = "<group>"; };
 		96FA77CB29A88F5500D7F923 /* SwiftNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FA77D529A88F5500D7F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FA77D729A88F5700D7F923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 			children = (
 				96CEE7CC29AE0CFB008B1AFA /* HDDemosViewController.swift */,
 				96F1218C29B2D99000128270 /* 01-mine */,
+				96F1219B29B46E8400128270 /* 02-artist */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -195,6 +206,18 @@
 				96DA514529AEFEF300A92405 /* Color+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		96F1219B29B46E8400128270 /* 02-artist */ = {
+			isa = PBXGroup;
+			children = (
+				96F121A429B472FC00128270 /* artists.json */,
+				96F1219C29B4727A00128270 /* HDDemoArtistController.swift */,
+				96F1219E29B4729900128270 /* HDDemoArtistDetailController.swift */,
+				96F121A829B4823A00128270 /* HDDemoArtistCell.swift */,
+				96F121A929B4823A00128270 /* HDDemoArtistCell.xib */,
+			);
+			path = "02-artist";
 			sourceTree = "<group>";
 		};
 		96FA77C229A88F5500D7F923 = {
@@ -288,6 +311,8 @@
 			files = (
 				96FA77DB29A88F5700D7F923 /* LaunchScreen.storyboard in Resources */,
 				96FA77D829A88F5700D7F923 /* Assets.xcassets in Resources */,
+				96F121A529B472FC00128270 /* artists.json in Resources */,
+				96F121AB29B4823A00128270 /* HDDemoArtistCell.xib in Resources */,
 				96FA77D629A88F5500D7F923 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,14 +325,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CEE7B529AC843A008B1AFA /* AppDelegate.swift in Sources */,
+				96F1219D29B4727A00128270 /* HDDemoArtistController.swift in Sources */,
 				96CEE7CF29AE0D25008B1AFA /* HDKitViewController.swift in Sources */,
 				96CEE7CD29AE0CFB008B1AFA /* HDDemosViewController.swift in Sources */,
 				96F1219629B2EAEB00128270 /* HDDemoMineController.swift in Sources */,
 				96F1219029B2DEA900128270 /* HDDemoMineUser.swift in Sources */,
 				96F1219429B2E8D600128270 /* HDDemoMineCell.swift in Sources */,
 				96DA514229AEF18800A92405 /* HDShopTabBarController.swift in Sources */,
+				96F1219F29B4729900128270 /* HDDemoArtistDetailController.swift in Sources */,
 				96F1219229B2E1AB00128270 /* HDDemoMinePopulate.swift in Sources */,
 				96CEE7CB29AE0B8E008B1AFA /* HDHomeViewController.swift in Sources */,
+				96F121AA29B4823A00128270 /* HDDemoArtistCell.swift in Sources */,
 				96CEE7B629AC843A008B1AFA /* SceneDelegate.swift in Sources */,
 				96CEE7BF29AC8B49008B1AFA /* HDBaseTabBarController.swift in Sources */,
 				96DA514629AEFEF300A92405 /* Color+Ext.swift in Sources */,
