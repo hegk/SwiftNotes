@@ -17,24 +17,19 @@ class HDDemoArtistCell: UITableViewCell {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    
+    
     override class func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
     
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//
-//
-//
-//
-//
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    func addData (artist: HDDemoArtist) {
+        avatarImage.image = artist.image
+        descLabel.text = artist.desc
+        nameLabel.text = artist.name
+    }
     
     
 }

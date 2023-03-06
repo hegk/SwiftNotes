@@ -11,6 +11,8 @@ import UIKit
 
 class HDDemoArtistController: UIViewController {
     
+    let artists = HDDemoArtist.artistsFromBundle()
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - kNavigationtBarAndStatuBarHeight)
@@ -41,13 +43,14 @@ extension HDDemoArtistController: UITableViewDelegate {
 extension HDDemoArtistController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return artists.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let artist = artists[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: HDDemoArtistCell.indentifier) as! HDDemoArtistCell
-        
+        cell.addData(artist: artist)
         return cell
     }
     

@@ -28,6 +28,8 @@
 		96F121A529B472FC00128270 /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F121A429B472FC00128270 /* artists.json */; };
 		96F121AA29B4823A00128270 /* HDDemoArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F121A829B4823A00128270 /* HDDemoArtistCell.swift */; };
 		96F121AB29B4823A00128270 /* HDDemoArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F121A929B4823A00128270 /* HDDemoArtistCell.xib */; };
+		96F121C029B5FB5900128270 /* HDDemoArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F121BF29B5FB5900128270 /* HDDemoArtist.swift */; };
+		96F121C229B5FC6D00128270 /* HDDemoWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F121C129B5FC6D00128270 /* HDDemoWork.swift */; };
 		96FA77D629A88F5500D7F923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D429A88F5500D7F923 /* Main.storyboard */; };
 		96FA77D829A88F5700D7F923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D729A88F5700D7F923 /* Assets.xcassets */; };
 		96FA77DB29A88F5700D7F923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA77D929A88F5700D7F923 /* LaunchScreen.storyboard */; };
@@ -55,6 +57,8 @@
 		96F121A429B472FC00128270 /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
 		96F121A829B4823A00128270 /* HDDemoArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoArtistCell.swift; sourceTree = "<group>"; };
 		96F121A929B4823A00128270 /* HDDemoArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDDemoArtistCell.xib; sourceTree = "<group>"; };
+		96F121BF29B5FB5900128270 /* HDDemoArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoArtist.swift; sourceTree = "<group>"; };
+		96F121C129B5FC6D00128270 /* HDDemoWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoWork.swift; sourceTree = "<group>"; };
 		96FA77CB29A88F5500D7F923 /* SwiftNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FA77D529A88F5500D7F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96FA77D729A88F5700D7F923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				96F121A429B472FC00128270 /* artists.json */,
+				96F121BF29B5FB5900128270 /* HDDemoArtist.swift */,
+				96F121C129B5FC6D00128270 /* HDDemoWork.swift */,
 				96F1219C29B4727A00128270 /* HDDemoArtistController.swift */,
 				96F1219E29B4729900128270 /* HDDemoArtistDetailController.swift */,
 				96F121A829B4823A00128270 /* HDDemoArtistCell.swift */,
@@ -329,7 +335,9 @@
 				96CEE7CF29AE0D25008B1AFA /* HDKitViewController.swift in Sources */,
 				96CEE7CD29AE0CFB008B1AFA /* HDDemosViewController.swift in Sources */,
 				96F1219629B2EAEB00128270 /* HDDemoMineController.swift in Sources */,
+				96F121C029B5FB5900128270 /* HDDemoArtist.swift in Sources */,
 				96F1219029B2DEA900128270 /* HDDemoMineUser.swift in Sources */,
+				96F121C229B5FC6D00128270 /* HDDemoWork.swift in Sources */,
 				96F1219429B2E8D600128270 /* HDDemoMineCell.swift in Sources */,
 				96DA514229AEF18800A92405 /* HDShopTabBarController.swift in Sources */,
 				96F1219F29B4729900128270 /* HDDemoArtistDetailController.swift in Sources */,
