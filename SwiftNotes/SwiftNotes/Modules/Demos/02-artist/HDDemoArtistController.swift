@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HDDemoArtistController: UIViewController {
+class HDDemoArtistController: HDBaseViewController {
     
     let artists = HDDemoArtist.artistsFromBundle()
     
@@ -38,6 +38,11 @@ class HDDemoArtistController: UIViewController {
 
 extension HDDemoArtistController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = HDDemoArtistDetailController()
+        vc.artist = artists[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension HDDemoArtistController: UITableViewDataSource {
