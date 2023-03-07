@@ -9,8 +9,11 @@
 
 /*
  Q:artists 的 let  ?  work 的let 不需要
-
- 
+ Q:关键路径 绝对路径  Xcode path  实际安装包path   FileManager 和 Bundle
+ Q: if let image的弊端
+ Q: let imageName = artist["image"]  as? String,
+    let image = UIImage(named: "imageName"),
+    当image或者image为空的时结束，注意不需要结束的场景比如使用占位或者是单纯不显示即可
  */
 
 import Foundation
@@ -31,7 +34,7 @@ struct HDDemoArtist {
     
     
     static func artistsFromBundle() -> [HDDemoArtist] {
-        var artists = [HDDemoArtist]()        
+        var artists = [HDDemoArtist]()
         guard let url = Bundle.main.url(forResource: "artists", withExtension: "json") else {
             return artists
         }
@@ -51,14 +54,14 @@ struct HDDemoArtist {
             for artist in artistsDict {
                 if let name = artist["name"] as? String,
                    let desc = artist["bio"] as? String,
-                   let imageName = artist["iamge"]  as? String,
-                   let image = UIImage(named: imageName),
+//                   let imageName = artist["image"]  as? String,
+                   let image = UIImage(named: "artist_placeholder"),
                    let worksDict = artist["works"] as? [[String : String]] {
                     var works = [HDDemoWork]()
                     for work in worksDict {
                         if let title = work["title"],
-                           let imageName = work["image"],
-                           let image = UIImage(named: imageName + ".jpg"),
+//                           let imageName = work["image"],
+                           let image = UIImage(named: "artist_placeholder"),
                            let info = work["info"] {
                             works.append(HDDemoWork(title: title, image: image, info: info, isExpanded: false))
                         }

@@ -215,7 +215,6 @@
 		96F1219B29B46E8400128270 /* 02-artist */ = {
 			isa = PBXGroup;
 			children = (
-				96F121A429B472FC00128270 /* artists.json */,
 				96F121BF29B5FB5900128270 /* HDDemoArtist.swift */,
 				96F121C129B5FC6D00128270 /* HDDemoWork.swift */,
 				96F1219C29B4727A00128270 /* HDDemoArtistController.swift */,
@@ -245,6 +244,7 @@
 		96FA77CD29A88F5500D7F923 /* SwiftNotes */ = {
 			isa = PBXGroup;
 			children = (
+				96F121A429B472FC00128270 /* artists.json */,
 				96F1217729B1F01000128270 /* Appliction */,
 				96F1218729B1F7E200128270 /* Base */,
 				96F1218029B1F46000128270 /* Modules */,
