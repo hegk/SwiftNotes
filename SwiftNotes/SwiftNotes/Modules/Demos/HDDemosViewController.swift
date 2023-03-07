@@ -12,6 +12,7 @@ import UIKit
 class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableViewDataSource {
     static let title_mine = "mine"
     static let title_artist = "artist"
+    static let title_search = "search"
 
 
     
@@ -23,7 +24,7 @@ class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableV
         view.addSubview(tableView)
     }
     
-   fileprivate let demosTitle = [title_mine, title_artist, "03"]
+   fileprivate let demosTitle = [title_mine, title_artist, title_search]
     
    fileprivate lazy var tableView: UITableView = {
        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kSafeAreaHeight), style: .plain)
@@ -58,6 +59,9 @@ extension HDDemosViewController {
             break
         case HDDemosViewController.title_artist:
             navigationController?.pushViewController(HDDemoArtistController(), animated: true)
+            break
+        case HDDemosViewController.title_search:
+            navigationController?.pushViewController(HDDemoSearchController(), animated: true)
             break
         default:
             break
