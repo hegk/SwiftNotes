@@ -13,7 +13,9 @@ class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableV
     static let title_mine = "mine"
     static let title_artist = "artist"
     static let title_search = "search"
-
+    static let title_carousel = "carousel"
+    
+    fileprivate let demosTitle = [title_mine, title_artist, title_search, title_carousel]
 
     
     override func viewDidLoad() {
@@ -23,8 +25,6 @@ class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableV
         view.backgroundColor = .systemGroupedBackground
         view.addSubview(tableView)
     }
-    
-   fileprivate let demosTitle = [title_mine, title_artist, title_search]
     
    fileprivate lazy var tableView: UITableView = {
        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kSafeAreaHeight), style: .plain)
@@ -62,6 +62,9 @@ extension HDDemosViewController {
             break
         case HDDemosViewController.title_search:
             navigationController?.pushViewController(HDDemoSearchController(), animated: true)
+            break
+        case HDDemosViewController.title_carousel:
+            navigationController?.pushViewController(HDDemoCarouselController(), animated: true)
             break
         default:
             break

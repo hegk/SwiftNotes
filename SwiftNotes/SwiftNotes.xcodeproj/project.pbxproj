@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96831A4F29B8A06E00A075AC /* HDDemoCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A4E29B8A06E00A075AC /* HDDemoCarouselController.swift */; };
+		96831A5129B8A1C000A075AC /* HDDemoCarouselInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A5029B8A1C000A075AC /* HDDemoCarouselInfo.swift */; };
+		96831A5329B8A1E300A075AC /* HDDemoCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A5229B8A1E300A075AC /* HDDemoCarouselCell.swift */; };
 		96CEE7B529AC843A008B1AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CEE7B329AC843A008B1AFA /* AppDelegate.swift */; };
 		96CEE7B629AC843A008B1AFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CEE7B429AC843A008B1AFA /* SceneDelegate.swift */; };
 		96CEE7BA29AC8563008B1AFA /* HDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CEE7B929AC8563008B1AFA /* HDBaseViewController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96831A4E29B8A06E00A075AC /* HDDemoCarouselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoCarouselController.swift; sourceTree = "<group>"; };
+		96831A5029B8A1C000A075AC /* HDDemoCarouselInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoCarouselInfo.swift; sourceTree = "<group>"; };
+		96831A5229B8A1E300A075AC /* HDDemoCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoCarouselCell.swift; sourceTree = "<group>"; };
 		96CEE7B329AC843A008B1AFA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CEE7B429AC843A008B1AFA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		96CEE7B929AC8563008B1AFA /* HDBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +91,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96831A4D29B8A00900A075AC /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				96831A5029B8A1C000A075AC /* HDDemoCarouselInfo.swift */,
+				96831A5229B8A1E300A075AC /* HDDemoCarouselCell.swift */,
+				96831A4E29B8A06E00A075AC /* HDDemoCarouselController.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		96DA514729AF319700A92405 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +145,7 @@
 				96F1218C29B2D99000128270 /* 01-mine */,
 				96F1219B29B46E8400128270 /* 02-artist */,
 				96F121C729B730EC00128270 /* 03-search */,
+				96831A4D29B8A00900A075AC /* Carousel */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -353,6 +370,7 @@
 			files = (
 				96CEE7B529AC843A008B1AFA /* AppDelegate.swift in Sources */,
 				96F1219D29B4727A00128270 /* HDDemoArtistController.swift in Sources */,
+				96831A5129B8A1C000A075AC /* HDDemoCarouselInfo.swift in Sources */,
 				96F121CB29B7346700128270 /* HDDemoSearchController.swift in Sources */,
 				96CEE7CF29AE0D25008B1AFA /* HDKitViewController.swift in Sources */,
 				96CEE7CD29AE0CFB008B1AFA /* HDDemosViewController.swift in Sources */,
@@ -361,6 +379,7 @@
 				96F121C029B5FB5900128270 /* HDDemoArtist.swift in Sources */,
 				96F1219029B2DEA900128270 /* HDDemoMineUser.swift in Sources */,
 				96F121C229B5FC6D00128270 /* HDDemoWork.swift in Sources */,
+				96831A4F29B8A06E00A075AC /* HDDemoCarouselController.swift in Sources */,
 				96F1219429B2E8D600128270 /* HDDemoMineCell.swift in Sources */,
 				96DA514229AEF18800A92405 /* HDShopTabBarController.swift in Sources */,
 				96F1219F29B4729900128270 /* HDDemoArtistDetailController.swift in Sources */,
@@ -373,6 +392,7 @@
 				96DA514629AEFEF300A92405 /* Color+Ext.swift in Sources */,
 				96DA514929AF321600A92405 /* Global.swift in Sources */,
 				96CEE7BA29AC8563008B1AFA /* HDBaseViewController.swift in Sources */,
+				96831A5329B8A1E300A075AC /* HDDemoCarouselCell.swift in Sources */,
 				96CEE7C529AD8F26008B1AFA /* HDBaseNavigationController.swift in Sources */,
 				96CEE7D329AE0EB7008B1AFA /* HDMineViewController.swift in Sources */,
 			);
