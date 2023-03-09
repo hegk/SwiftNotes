@@ -13,7 +13,7 @@ import UIKit
     Q :self.rosters.append(roster) 和 self.tableView.reloadData() 解决block中的循环引用的原理是什么
  */
 
-let dataSourceUrl = URL(string: "http://www.raywenderlich.com/downloads/ClassicPhotosDictionary.plist")
+let dataSourceUrl = URL(string: "https://www.raywenderlich.com/downloads/ClassicPhotosDictionary.plist")
 
 
 class HDDemoRosterController: HDBaseViewController {
@@ -56,7 +56,9 @@ class HDDemoRosterController: HDBaseViewController {
                                 self.rosters.append(roster)
                             }
                         }
-                        self.tableView.reloadData()
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     }
                 } catch let error as NSError {
                     print(error.domain)
