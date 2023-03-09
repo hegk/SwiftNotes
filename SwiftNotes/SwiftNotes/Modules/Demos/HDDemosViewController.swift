@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 
 class HDDemosViewController: HDBaseViewController, UITableViewDelegate, UITableViewDataSource {
-    static let title_mine = "mine"
-    static let title_artist = "artist"
-    static let title_search = "search"
+    static let title_mine     = "mine"
+    static let title_artist   = "artist"
+    static let title_search   = "search"
     static let title_carousel = "carousel"
+    static let title_roster   = "roster"
+
     
-    fileprivate let demosTitle = [title_mine, title_artist, title_search, title_carousel]
+    fileprivate let demosTitle = [title_mine, title_artist, title_search, title_carousel,title_roster]
 
     
     override func viewDidLoad() {
@@ -65,6 +67,9 @@ extension HDDemosViewController {
             break
         case HDDemosViewController.title_carousel:
             navigationController?.pushViewController(HDDemoCarouselController(), animated: true)
+            break
+        case HDDemosViewController.title_roster:
+            navigationController?.pushViewController(HDDemoRosterController(), animated: true)
             break
         default:
             break

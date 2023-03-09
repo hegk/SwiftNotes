@@ -10,6 +10,8 @@
 		96831A4F29B8A06E00A075AC /* HDDemoCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A4E29B8A06E00A075AC /* HDDemoCarouselController.swift */; };
 		96831A5129B8A1C000A075AC /* HDDemoCarouselInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A5029B8A1C000A075AC /* HDDemoCarouselInfo.swift */; };
 		96831A5329B8A1E300A075AC /* HDDemoCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A5229B8A1E300A075AC /* HDDemoCarouselCell.swift */; };
+		96831A5629B9B71F00A075AC /* HDDemoRosterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A5529B9B71F00A075AC /* HDDemoRosterController.swift */; };
+		96831A5829B9B73600A075AC /* HDDemoRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96831A5729B9B73500A075AC /* HDDemoRoster.swift */; };
 		96CEE7B529AC843A008B1AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CEE7B329AC843A008B1AFA /* AppDelegate.swift */; };
 		96CEE7B629AC843A008B1AFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CEE7B429AC843A008B1AFA /* SceneDelegate.swift */; };
 		96CEE7BA29AC8563008B1AFA /* HDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CEE7B929AC8563008B1AFA /* HDBaseViewController.swift */; };
@@ -46,6 +48,8 @@
 		96831A4E29B8A06E00A075AC /* HDDemoCarouselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoCarouselController.swift; sourceTree = "<group>"; };
 		96831A5029B8A1C000A075AC /* HDDemoCarouselInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoCarouselInfo.swift; sourceTree = "<group>"; };
 		96831A5229B8A1E300A075AC /* HDDemoCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoCarouselCell.swift; sourceTree = "<group>"; };
+		96831A5529B9B71F00A075AC /* HDDemoRosterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoRosterController.swift; sourceTree = "<group>"; };
+		96831A5729B9B73500A075AC /* HDDemoRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDemoRoster.swift; sourceTree = "<group>"; };
 		96CEE7B329AC843A008B1AFA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CEE7B429AC843A008B1AFA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		96CEE7B929AC8563008B1AFA /* HDBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 			path = Carousel;
 			sourceTree = "<group>";
 		};
+		96831A5429B9B05000A075AC /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				96831A5529B9B71F00A075AC /* HDDemoRosterController.swift */,
+				96831A5729B9B73500A075AC /* HDDemoRoster.swift */,
+			);
+			path = Roster;
+			sourceTree = "<group>";
+		};
 		96DA514729AF319700A92405 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,7 @@
 				96F1219B29B46E8400128270 /* 02-artist */,
 				96F121C729B730EC00128270 /* 03-search */,
 				96831A4D29B8A00900A075AC /* Carousel */,
+				96831A5429B9B05000A075AC /* Roster */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -371,10 +385,12 @@
 				96CEE7B529AC843A008B1AFA /* AppDelegate.swift in Sources */,
 				96F1219D29B4727A00128270 /* HDDemoArtistController.swift in Sources */,
 				96831A5129B8A1C000A075AC /* HDDemoCarouselInfo.swift in Sources */,
+				96831A5829B9B73600A075AC /* HDDemoRoster.swift in Sources */,
 				96F121CB29B7346700128270 /* HDDemoSearchController.swift in Sources */,
 				96CEE7CF29AE0D25008B1AFA /* HDKitViewController.swift in Sources */,
 				96CEE7CD29AE0CFB008B1AFA /* HDDemosViewController.swift in Sources */,
 				96F121C929B7338900128270 /* HDDemoSearchInfo.swift in Sources */,
+				96831A5629B9B71F00A075AC /* HDDemoRosterController.swift in Sources */,
 				96F1219629B2EAEB00128270 /* HDDemoMineController.swift in Sources */,
 				96F121C029B5FB5900128270 /* HDDemoArtist.swift in Sources */,
 				96F1219029B2DEA900128270 /* HDDemoMineUser.swift in Sources */,
