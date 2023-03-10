@@ -22,6 +22,7 @@ class HDDemoRosterController: HDBaseViewController {
     
     
     var rosters = [HDDemoRoster]()
+    var pendingOperations = HDDemoPendingOperations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,11 +97,11 @@ class HDDemoRosterController: HDBaseViewController {
 }
 
 extension HDDemoRosterController {
-    fileprivate func starOperetionsForResource(roster: HDDemoRoster, indexPath: IndexPath) {
+    fileprivate func startOperationsForResource(roster: HDDemoRoster, indexPath: IndexPath) {
         switch(roster.state) {
         case .New:
             startDownloadForResource(roster: roster, indexPath: indexPath)
-        case.Download:
+        case.Downloaded:
             startFiltrationForResource(roster: roster, indexPath: indexPath)
         default:
             NSLog("do nothing")
@@ -108,44 +109,113 @@ extension HDDemoRosterController {
     }
     
     fileprivate func startDownloadForResource(roster: HDDemoRoster, indexPath: IndexPath) {
-
+        if let _ = pendingOperations.downloadsInProgress[indexPath] {
+            return
+        }
+        
+        let downloader = ImageDownloader(roster: roster)
+        
+        downloader.completionBlock = {
+            if downloader.isCancelled {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+        }
+        
+        pendingOperations.downloadsInProgress[indexPath] = downloader
+        pendingOperations.downloadQueue.addOperation(downloader)
     }
     
     fileprivate func startFiltrationForResource(roster: HDDemoRoster, indexPath: IndexPath) {
+        if let _ = pendingOperations.filtrationsInProgress[indexPath] {
+            return
+        }
         
+        let downloader = ImageFiltration(roster: roster)
+        
+        downloader.completionBlock = {
+            if downloader.isCancelled {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.pendingOperations.filtrationsInProgress.removeValue(forKey: indexPath)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+        }
+        
+        pendingOperations.filtrationsInProgress[indexPath] = downloader
+        pendingOperations.filtrationQueue.addOperation(downloader)
     }
 }
 
 extension HDDemoRosterController {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        
+        suspendAllOperations()
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
+        if !decelerate {
+            loadImagesForOnscreenCells()
+            resumeAllOperations()
+        }
     }
     
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        loadImagesForOnscreenCells()
+        resumeAllOperations()
     }
     
     fileprivate func suspendAllOperations () {
-        
+        pendingOperations.downloadQueue.isSuspended = true
+        pendingOperations.filtrationQueue.isSuspended = true
     }
     
     fileprivate func resumeAllOperations () {
-        
+        pendingOperations.downloadQueue.isSuspended = false
+        pendingOperations.filtrationQueue.isSuspended = false
     }
     
     fileprivate func loadImagesForOnscreenCells () {
-        
-    }
-    
-    
-    
-    
-    
+        if let pathsArray = tableView.indexPathsForVisibleRows {
+          
+          var allPendingOperations = Set(pendingOperations.downloadsInProgress.keys)
+          allPendingOperations = allPendingOperations.union(pendingOperations.filtrationsInProgress.keys)
+          
+          // get cells should cancel operations
+          var toBeCancelled = allPendingOperations
+          let visiblePaths = Set(pathsArray)
+          toBeCancelled.subtract(visiblePaths)
+          
+          // get cells should be started as new
+          var toBeStarted = visiblePaths
+          toBeStarted.subtract(allPendingOperations)
+          
+          // cancel download and filter operations for unvisible cells
+          for indexPath in toBeCancelled {
+            if let pendingDownload = pendingOperations.downloadsInProgress[indexPath] {
+              pendingDownload.cancel()
+            }
+            pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+            if let pendingFiltration = pendingOperations.filtrationsInProgress[indexPath] {
+              pendingFiltration.cancel()
+            }
+            pendingOperations.filtrationsInProgress.removeValue(forKey: indexPath)
+          }
+          
+          // start operation for new visible cells
+          for indexPath in toBeStarted {
+            let roster = self.rosters[indexPath.row]
+            startOperationsForResource(roster: roster, indexPath: indexPath)
+          }
+        }
+      }
 }
+
 
 extension HDDemoRosterController: UITableViewDelegate ,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -154,14 +224,27 @@ extension HDDemoRosterController: UITableViewDelegate ,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCellID", for: indexPath)
-        
-//        if cell.accessoryView == nil {
-//            let indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-//            cell.accessoryView = indicator
-//        }
-//        let indicator = cell.accessoryView as! UIActivityIndicatorView
-        
         let roster = rosters[indexPath.row]
+
+        if cell.accessoryView == nil {
+            let indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+            cell.accessoryView = indicator
+        }
+        
+        let indicator = cell.accessoryView as! UIActivityIndicatorView
+        
+        switch (roster.state){
+        case .Filtered:
+          indicator.stopAnimating()
+        case .Failed:
+          indicator.stopAnimating()
+          cell.textLabel?.text = "Failed to load"
+        case .New, .Downloaded:
+          indicator.startAnimating()
+          if (!tableView.isDragging && !tableView.isDecelerating) {
+            self.startOperationsForResource(roster: roster, indexPath: indexPath)
+          }
+        }
         
         cell.textLabel?.text = roster.name
         cell.imageView?.image = roster.image
